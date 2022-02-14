@@ -10,15 +10,21 @@ function rev(revWord) {
   return revWord.split("").reverse().join("");;
 }
 
-const Calculator = function (num1, opperator, num2) {
-  return (num1 opperator num2)
-
-
+const Calc = function (num1, opperator, num2) {
+  if(opperator === '+'){
+    return (num1 + num2)
+  } else if(opperator === '-'){
+    return (num1 - num2)
+  } else if (opperator === '*'){
+    return (num1 * num2)
+  } else if (opperator === '/') {
+    return (num1 / num2)
+  } else {
+    return "not a valid opperator"
+  }
 }
-
-}
-
 
 exports.cap = cap;
 exports.sum = sum;
 exports.rev = rev;
+exports.Calc = Calc;

@@ -2,6 +2,8 @@ const sum = require('./sum.js');
 const cap = require('./sum.js');
 const rev = require('./sum.js');
 const Calc = require('./sum.js');
+const cipher = require('./sum.js');
+const verify = require('./sum.js');
 
 test('Adds 1 + 2 to equal 3', () => {
   expect(sum.sum(1, 2)).toBe(3);
@@ -33,4 +35,25 @@ test('Takes 2 numbers and multiplies them', () => {
 
 test('Takes 2 numbers and divides them', () => {
   expect(Calc.Calc(3, '/', 2)).toBe(1.5);
+})
+
+test('Ceaser cipher takes "defend the East wall of the castle Z" and shifts it by one', () => {
+  expect(cipher.cipher('defend the east wall of the castle Z')
+  ).toBe('efgfoe uif fbtu xbmm pg uif dbtumf A');
+})
+
+test('Takes an array and returns an object with average of the array', () => {
+  expect(verify.verify([1,8,3,4,2,6], 'average')).toBe(4)
+})
+
+test('Takes an array and returns an object with average of the array', () => {
+  expect(verify.verify([1,8,3,4,2,6], 'min')).toBe(1)
+})
+
+test('Takes an array and returns an object with average of the array', () => {
+  expect(verify.verify([1,8,3,4,2,6], 'max')).toBe(8)
+})
+
+test('Takes an array and returns an object with average of the array', () => {
+  expect(verify.verify([1,8,3,4,2,6], 'length')).toBe(6)
 })

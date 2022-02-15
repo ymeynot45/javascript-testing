@@ -39,18 +39,22 @@ function cipher(str) {
   return resultStr.join("");
 };
 
-const verify(numbers, calculation) => {
-  if(calculation = 'average'){
-
-  }else if (calculation = 'min'){
-
-  }else if (calculation = 'max'){
-
-  }else if (calculation = 'length'){
-
+const verify = function(numbers, calculation) {
+  const length = numbers.length
+  if(calculation === 'average'){
+    var sum = 0;
+    for (var i = 0; i < length; i++) {
+      sum += parseInt(numbers[i]);
+    }
+    return (sum/length)
+  }else if (calculation === 'min'){
+    return 
+  }else if (calculation === 'max'){
+    return 
+  }else if (calculation === 'length'){
+    return length
   }
 }
-
 
 exports.cap = cap;
 exports.sum = sum;

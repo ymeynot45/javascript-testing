@@ -1,12 +1,12 @@
-function sum(a, b) {
+function sum (a, b) {
   return a+b;
 }
 
-function cap(word) {
+function cap (word) {
   return word.replace(/^\w/, (c) => c.toUpperCase());
 }
 
-function rev(revWord) {
+function rev (revWord) {
   return revWord.split("").reverse().join("");;
 }
 
@@ -24,7 +24,7 @@ const Calc = function (num1, opperator, num2) {
   }
 }
 
-function cipher(str) {
+function cipher (str) {
   var alphabets =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z', 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"];
   var alphabets1 = ['B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a', " ", "-", "_", ".", "&","?", "!", "@", "#", "/"];
   
@@ -39,29 +39,30 @@ function cipher(str) {
   return resultStr.join("");
 };
 
-const verify = function(numbers) {
+const verify = function (numbers) {
   const length = numbers.length
-  const compareNumbers = function(a, b) {
-    return a - b;
+  const compareNumbers = function (a, b) {
+    return a - b
   }
-  const analyzedArray = function(ave, min, max, length){
-    this.ave = ave,
-    this.min = min,
-    this.max = max,
+  const AnalyzedArray = function (ave, min, max, length) {
+    this.ave = ave
+    this.min = min
+    this.max = max
     this.length = length
     return this
   }
   numbers = numbers.sort(compareNumbers)
-  var sum = 0;
-  for (var i = 0; i < length; i++) {
-    sum += parseInt(numbers[i]);
+  let sum = 0
+  for (let i = 0; i < length; i++) {
+    sum += parseInt(numbers[i])
   }
-  return testArray = new analyzedArray((sum/length), numbers[0], numbers[length-1], length)
+  const testArray = new AnalyzedArray((sum / length), numbers[0], numbers[length - 1], length)
+  return testArray
 }
 
-exports.cap = cap;
-exports.sum = sum;
-exports.rev = rev;
-exports.Calc = Calc;
-exports.cipher = cipher;
-exports.verify = verify;
+exports.cap = cap
+exports.sum = sum
+exports.rev = rev
+exports.Calc = Calc
+exports.cipher = cipher
+exports.verify = verify

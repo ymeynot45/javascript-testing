@@ -1,42 +1,42 @@
 function sum (a, b) {
-  return a+b;
+  return a + b
 }
 
 function cap (word) {
-  return word.replace(/^\w/, (c) => c.toUpperCase());
+  return word.replace(/^\w/, (c) => c.toUpperCase())
 }
 
 function rev (revWord) {
-  return revWord.split("").reverse().join("");;
+  return revWord.split('').reverse().join('')
 }
 
 const Calc = function (num1, opperator, num2) {
-  if(opperator === '+'){
+  if (opperator === '+') {
     return (num1 + num2)
-  } else if(opperator === '-'){
+  } else if (opperator === '-') {
     return (num1 - num2)
-  } else if (opperator === '*'){
+  } else if (opperator === '*') {
     return (num1 * num2)
   } else if (opperator === '/') {
     return (num1 / num2)
   } else {
-    return "not a valid opperator"
+    return 'not a valid opperator'
   }
 }
 
 function cipher (str) {
-  var alphabets =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z', 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', " ", "-", "_", ".", "&", "?", "!", "@", "#", "/"];
-  var alphabets1 = ['B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A', 'b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a', " ", "-", "_", ".", "&","?", "!", "@", "#", "/"];
-  
-  var resultStr = [];
-  for(let i=0; i < str.length; i++){
-      for(let j =0; j<alphabets.length; j++){
-          if(str[i] === alphabets[j]){
-          resultStr.push(alphabets1[j]);
-          }
+  const alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ', '-', '_', '.', '&', '?', '!', '@', '#', '/']
+  const alphabets1 = ['B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', ' ', '-', '_', '.', '&', '?', '!', '@', '#', '/']
+
+  const resultStr = []
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < alphabets.length; j++) {
+      if (str[i] === alphabets[j]) {
+        resultStr.push(alphabets1[j])
       }
+    }
   }
-  return resultStr.join("");
+  return resultStr.join('')
 };
 
 const verify = function (numbers) {

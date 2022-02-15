@@ -43,17 +43,33 @@ test('Ceaser cipher takes "defend the East wall of the castle Z" and shifts it b
 })
 
 test('Takes an array and returns an object with average of the array', () => {
-  expect(verify.verify([1,8,3,4,2,6], 'average')).toBe(4)
+  expect(verify.verify([1,8,3,4,2,6]).ave).toBe(4)
 })
 
 test('Takes an array and returns an object with min of the array', () => {
-  expect(verify.verify([1,8,3,4,2,6], 'min')).toBe(1)
+  expect(verify.verify([1,8,3,4,2,6]).min).toBe(1)
 })
 
 test('Takes an array and returns an object with max of the array', () => {
-  expect(verify.verify([1,8,3,4,2,6], 'max')).toBe(8)
+  expect(verify.verify([1,8,3,4,2,6]).max).toBe(8)
 })
 
 test('Takes an array and returns an object with length of the array', () => {
-  expect(verify.verify([1,8,3,4,2,6], 'length')).toBe(6)
+  expect(verify.verify([1,8,3,4,2,6]).length).toBe(6)
 })
+
+// test('Takes an array and returns an object with average of the array', () => {
+//   expect(verify.verify([1,8,3,4,2,6], 'average')).toBe(4)
+// })
+
+// test('Takes an array and returns an object with min of the array', () => {
+//   expect(verify.verify([1,8,3,4,2,6], 'min')).toBe(1)
+// })
+
+// test('Takes an array and returns an object with max of the array', () => {
+//   expect(verify.verify([1,8,3,4,2,6], 'max')).toBe(8)
+// })
+
+// test('Takes an array and returns an object with length of the array', () => {
+//   expect(verify.verify([1,8,3,4,2,6], 'length')).toBe(6)
+// })

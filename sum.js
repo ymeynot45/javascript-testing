@@ -39,21 +39,24 @@ function cipher(str) {
   return resultStr.join("");
 };
 
-const verify = function(numbers, calculation) {
+const verify = function(numbers) {
   const length = numbers.length
-  if(calculation === 'average'){
-    var sum = 0;
-    for (var i = 0; i < length; i++) {
-      sum += parseInt(numbers[i]);
-    }
-    return (sum/length)
-  }else if (calculation === 'min'){
-    return 
-  }else if (calculation === 'max'){
-    return 
-  }else if (calculation === 'length'){
-    return length
+  const compareNumbers = function(a, b) {
+    return a - b;
   }
+  const analyzedArray = function(ave, min, max, length){
+    this.ave = ave,
+    this.min = min,
+    this.max = max,
+    this.length = length
+    return this
+  }
+  numbers = numbers.sort(compareNumbers)
+  var sum = 0;
+  for (var i = 0; i < length; i++) {
+    sum += parseInt(numbers[i]);
+  }
+  return testArray = new analyzedArray((sum/length), numbers[0], numbers[length-1], length)
 }
 
 exports.cap = cap;
